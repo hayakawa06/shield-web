@@ -236,6 +236,51 @@ nav a:hover {
   order: 2;
 }
 
+@media (max-width: 768px) {
+  .about {
+    padding: 1.5rem 1rem;
+  }
+
+  .about h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .about-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+  }
+
+  .about-img {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+  }
+
+  .about-left-img,
+  .about-right-img {
+    grid-template-columns: 1fr !important; /* fallback in case grid is applied */
+  }
+
+  .about-left-img .about-img,
+  .about-right-img .about-img {
+    order: 1;
+  }
+
+  .about-left-img .about-text,
+  .about-right-img .about-text {
+    order: 2;
+  }
+}
+
 /* Student Life Section */
 
 .student-life-section {
@@ -357,6 +402,50 @@ nav a:hover {
   font-weight: large;
 }
 
+@media (max-width: 768px) {
+  .student-life-section {
+    padding: 2rem 1rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-descr {
+    font-size: 0.95rem;
+    padding: 0 1rem;
+  }
+
+  .activities-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .activity-card.vertical {
+    padding: 1.5rem;
+    min-height: 350px;
+  }
+
+  .activity-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .activity-card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .activity-card p {
+    font-size: 1rem;
+  }
+
+  .divider {
+    width: 40px;
+  }
+}
+
+
 /* Events Section */
 
 .events-section {
@@ -443,6 +532,35 @@ nav a:hover {
   background-image: url('../images/event3.jpg');
 }
 
+@media (max-width: 768px) {
+  .events-section {
+    padding: 2rem 1rem;
+  }
+
+  .event-cards {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .event-card {
+    height: 350px;
+  }
+
+  .event-overlay h2 {
+    font-size: 1.3rem;
+  }
+
+  .event-overlay p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .event-card:hover .event-overlay {
+    padding-bottom: 2rem;
+  }
+}
+
+
 /* News Section */
 
 .news-section {
@@ -457,7 +575,7 @@ nav a:hover {
 
 .news-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 0.5s));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 3rem;
 }
 
@@ -521,6 +639,30 @@ nav a:hover {
   background-image: url('../images/heat-alert.jpg');
 }
 
+@media (max-width: 768px) {
+  .news-section {
+    padding: 2rem 1rem;
+  }
+
+  .news-list {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .news-item {
+    height: 220px;
+    padding: 1.5rem;
+  }
+
+  .news-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .news-content p {
+    font-size: 1rem;
+  }
+}
+
 /* Contact Section*/
 
 .contact-section {
@@ -538,7 +680,7 @@ nav a:hover {
 
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 4fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -598,6 +740,34 @@ nav a:hover {
   text-decoration: underline;
 }
 
+.contact-card::before {
+  width: 40px;
+  height: 40px;
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .contact-card {
+    padding-left: 3.5rem;
+  }
+
+  .contact-card::before {
+    width: 30px;
+    height: 30px;
+    top: 1.5rem;
+    left: 0.8rem;
+  }
+
+  .contact-card h3 {
+    font-size: 1.25rem;
+  }
+}
+
+
 /* Footer Section */
 
 .site-footer {
@@ -635,62 +805,26 @@ nav a:hover {
   color: #aaa;
 }
 
-/*RESPONSIVE DESIGN*/
-
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    padding: 1rem;
-  }
-  
-  nav ul {
-    margin-top: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  nav li {
-    margin: 0.5rem;
-  }
-  
-  .section-title {
-    font-size: 2rem;
-  }
-  
-  .activities-grid {
-    grid-template-columns: 1fr;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-  
-  .event-card {
-    height: 350px;
-  }
-  
-  .event-overlay {
-    padding: 1.5rem;
-  }
-  
-  .event-overlay h2 {
-    font-size: 1.3rem;
-  }
-  
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .contact-card {
-    padding-left: 2rem;
-  }
-  
-  .contact-card::before {
-    width: 30px;
-    height: 30px;
-  }
+.footer-logo img {
+  object-fit: contain;
+  max-width: 100%;
 }
 
-@media (max-width: 1000px) {
-  .news-list {
-    gap: 2rem;
+@media (min-width: 768px) {
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-info {
+    text-align: left;
+  }
+
+  .footer-logo {
+    text-align: left;
   }
 }
