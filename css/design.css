@@ -158,14 +158,14 @@ nav a:hover {
 /* Interface Section */
 
 .interface {
-  position: relative;
-  color: white;
-  padding: 10rem 5rem;
+  height: 300px; 
+  padding: 2rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: flex-start;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  position: relative;
+  color: white;
   gap: 0.5rem;
   overflow: hidden;
   z-index: 0;
@@ -176,10 +176,11 @@ nav a:hover {
   position: absolute;
   inset: 0;
   background: url('../images/bg.jpg') no-repeat center center / cover;
-  filter: blur(3px);
+  filter: blur(6px);
   z-index: -1;
   transform: scale(1.05);
 }
+
 
 .interface h1 {
   font-size: 3rem;
@@ -464,24 +465,27 @@ nav a:hover {
 /* Events Section */
 
 .events-section {
-  padding: 4rem 1rem;
+  padding: 2rem 1rem;
+  margin-bottom: 200px;
   background-color: white;
   max-width: 2000px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  margin-bottom: 40px;
+  overflow: hidden;
 }
 
 .event-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
+  align-items: start;
 }
 
 .event-card {
   position: relative;
-  height: 400px;
+  height: 600px;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -590,13 +594,13 @@ nav a:hover {
 
 .news-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(1fr));
+  gap: 1rem;
 }
 
 .news-item {
   position: relative;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 12px;
   overflow: hidden;
   height: 250px;
